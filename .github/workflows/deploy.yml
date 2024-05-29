@@ -7,10 +7,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Lint code
-        run: npm lint
+        run: npm run lint
       - name: Test code
-        run: npm test
+        run: npm run test
       - name: Build code
-        run: npm build
+        run: npm run build
       - name: Deploy app
         run: echo 'Deploying...'
