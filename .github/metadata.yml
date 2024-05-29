@@ -1,0 +1,10 @@
+name: Metadata Workflow
+on:
+  issues:
+    types: open
+jobs:
+  print-github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Github context
+        run: echo '${{ toJSON(github) }}'

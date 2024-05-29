@@ -1,0 +1,16 @@
+name: Deploy Workflow
+on: push 
+jobs:
+  lint-test-and-build:
+    runs_on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Lint code
+        run: npm lint
+      - name: Test code
+        run: npm test
+      - name: Build code
+        run: npm build
+      - name: Deploy app
+        run: echo 'Deploying...'
